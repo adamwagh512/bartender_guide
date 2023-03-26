@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Background Image for landing page */
 .landing_page {
   background-image: url(../../public/Images/brick_background.jpg);
   width: 100vw;
@@ -9,52 +10,42 @@
   background-size: cover;
 }
 
-
-/* CSS Rules for the larger neon sign */
+/* Importing fonts */
 @font-face {
   font-family: neon;
   src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
 }
 
+
+
+/* CSS for classes */
 .container {
   display: block;
   text-align: center;
   vertical-align: middle;
-  margin: auto
+  margin: auto;
 }
 
 .neon {
   font-family: neon;
-  color: #FB4264;
+  color: #fb4264;
   font-size: 9vw;
   line-height: 9vw;
-  text-shadow: 0 0 3vw #F40A35;
+  text-shadow: 0 0 3vw #f40a35;
 }
 
 .flux {
   font-family: neon;
-  color: #426DFB;
+  color: #426dfb;
   font-size: 9vw;
   line-height: 9vw;
-  text-shadow: 0 0 3vw #2356FF;
+  text-shadow: 0 0 3vw #2356ff;
 }
 
 .neon {
   animation: neon 1s ease infinite;
   -moz-animation: neon 1s ease infinite;
   -webkit-animation: neon 1s ease infinite;
-}
-
-@keyframes neon {
-  0%,
-  100% {
-    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
-    color: #FED128;
-  }
-  50% {
-    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
-    color: #806914;
-  }
 }
 
 .flux {
@@ -64,181 +55,192 @@
   -o-animation: flux 2s linear infinite;
 }
 
-@keyframes flux {
-  0%,
-  100% {
-    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
-    color: #28D7FE;
-  }
-  50% {
-    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
-    color: #146C80;
-  }
-}
-
-/* CSS for smaller neon sign on landing page */
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-body {
-  background-color:black;
-}
-
 .small_neon {
-  text-align:center;
-  position:relative;
-  border:5px solid #1086e8;
-  width:300px;
-  top:150px;
-  border-radius:20px;
-  left:50%;
+  text-align: center;
+  position: relative;
+  border: 5px solid #1086e8;
+  width: 300px;
+  top: 150px;
+  border-radius: 20px;
+  left: 50%;
   margin: -50px 0 0 -150px;
-  animation: border-flicker 2s linear infinite
+  animation: border-flicker 2s linear infinite;
 }
 
-h1 {
-  color:#FF00E6;
-  font-family: 'Raleway', sans-serif;
-  font-size:64px;
-  letter-spacing:10px;
+.small_neon h1 {
+  color: #ff00e6;
+  font-family: "Raleway", sans-serif;
+  font-size: 64px;
+  letter-spacing: 10px;
   animation: text-flicker 3s linear infinite;
 }
 
+/* Styling for IDs */
 #offset {
   animation: letter-flicker 2s linear infinite;
 }
 
-@keyframes text-flicker {
+/* Keyframes for animating  neon signs */
+@keyframes letter-flicker {
   0% {
-    opacity:0.1;
+    opacity: 0.1;
     text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
-  
   2% {
-    opacity:1;
+    opacity: 0.1;
     text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
-  8% {
-    opacity:0.1;
+  4% {
+    opacity: 1;
     text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
-  9% {
-    opacity:1;
+
+  19% {
+    opacity: 1;
     text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
-  12% {
-    opacity:0.1;
-    text-shadow: 0px 0px rgba(242, 22, 22, 1);
+  21% {
+    opacity: 0.1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
-  20% {
-    opacity:1;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+  23% {
+    opacity: 1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
-  25% {
-    opacity:0.3;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+
+  80% {
+    opacity: 1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
-  30% {
-    opacity:1;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+  83% {
+    opacity: 0.4;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
-  
-  70% {
-    opacity:0.7;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
-  }
-  
-  72% {
-    opacity:0.2;
-    text-shadow:0px 0px 29px rgba(242, 22, 22, 1)
-  }
-  
-  77% {
-    opacity:.9;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
-  }
-  100% {
-    opacity:.9;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+  87% {
+    opacity: 1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
 }
 
 @keyframes border-flicker {
   0% {
-    opacity:0.1;
-    -webkit-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
--moz-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
+    opacity: 0.1;
+    -webkit-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    -moz-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
   }
   2% {
-    opacity:1;
-    -webkit-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
--moz-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
+    opacity: 1;
+    -webkit-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    -moz-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
   }
   4% {
-    opacity:0.1;
-    -webkit-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
--moz-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
+    opacity: 0.1;
+    -webkit-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    -moz-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
   }
-  
+
   8% {
-    opacity:1;
-    -webkit-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
--moz-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
+    opacity: 1;
+    -webkit-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    -moz-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
   }
   70% {
-    opacity:0.7;
-    -webkit-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
--moz-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
+    opacity: 0.7;
+    -webkit-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    -moz-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
   }
   100% {
-    opacity:1;
-    -webkit-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
--moz-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
+    opacity: 1;
+    -webkit-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    -moz-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
   }
 }
 
-@keyframes letter-flicker {
+@keyframes text-flicker {
   0% {
-    opacity:0.1;
+    opacity: 0.1;
     text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
+
   2% {
-    opacity:0.1;
+    opacity: 1;
     text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
-  4% {
-    opacity:1;
+  8% {
+    opacity: 0.1;
     text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
-  
-  
-  19% {
-    opacity:1;
+  9% {
+    opacity: 1;
     text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
-  21% {
-    opacity:0.1;
+  12% {
+    opacity: 0.1;
+    text-shadow: 0px 0px rgba(242, 22, 22, 1);
+  }
+  20% {
+    opacity: 1;
     text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
-  23% {
-    opacity:1;
+  25% {
+    opacity: 0.3;
     text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
-  
-  80% {
-    opacity:1;
+  30% {
+    opacity: 1;
     text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
-  83% {
-    opacity:0.4;
+
+  70% {
+    opacity: 0.7;
     text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
-  87% {
-    opacity:1;
+
+  72% {
+    opacity: 0.2;
     text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+
+  77% {
+    opacity: 0.9;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  100% {
+    opacity: 0.9;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+}
+
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #fa1c16, 0 0 3vw #fa1c16, 0 0 10vw #fa1c16,
+      0 0 10vw #fa1c16, 0 0 0.4vw #fed128, 0.5vw 0.5vw 0.1vw #806914;
+    color: #fed128;
+  }
+  50% {
+    text-shadow: 0 0 0.5vw #800e0b, 0 0 1.5vw #800e0b, 0 0 5vw #800e0b,
+      0 0 5vw #800e0b, 0 0 0.2vw #800e0b, 0.5vw 0.5vw 0.1vw #40340a;
+    color: #806914;
+  }
+}
+
+@keyframes flux {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #1041ff, 0 0 3vw #1041ff, 0 0 10vw #1041ff,
+      0 0 10vw #1041ff, 0 0 0.4vw #8bfdfe, 0.5vw 0.5vw 0.1vw #147280;
+    color: #28d7fe;
+  }
+  50% {
+    text-shadow: 0 0 0.5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180,
+      0 0 5vw #082180, 0 0 0.2vw #082180, 0.5vw 0.5vw 0.1vw #0a3940;
+    color: #146c80;
   }
 }
