@@ -31,7 +31,7 @@ const navbar = () => {
         />
           
         <div className="hidden md:flex bg-[#070e26] text-white">
-          <input type="text" name='drink_name' placeholder="Enter drink name" />
+          <input className="text-black" type="text" name='drink_name' placeholder="Search for a Drink" />
           <button className="p-2">Submit</button>
         </div>
 
@@ -40,7 +40,7 @@ const navbar = () => {
         <div onClick={handleNav} className="md:hidden">
           {/* accessing icon from react icons dependency(to install: npm add react-icons) */}
           {/* Increased Icon size */}
-          <AiOutlineMenu size={25} />
+          <AiOutlineMenu className="text-[#F2B950]" size={25} />
         </div>
       </div>
       {/* Overlay for when the mobile menu is activated */}
@@ -53,7 +53,7 @@ const navbar = () => {
         <div
           className={
             nav
-              ? "fixed left-0 top-0 w-{75%} sm:w-[60%] md:[45%] h-screen bg-[#1f2937] p-10 ease-in duration-500"
+              ? "fixed left-0 top-0 w-{75%} sm:w-[60%] md:[45%] h-screen bg-[#8C1111] p-10 ease-in duration-500"
               : // We set this to -100% fixed left so we can have the nice ease in feature
                 "fixed left-[-100%] top-0 p-10 ease-in duration-500"
           }
@@ -62,19 +62,24 @@ const navbar = () => {
             {/* Top part of the mobile menu */}
             <div className="flex w-full items-center justify-between">
               {/* Controls mobile logo */}
-             
+              <Image
+                src={logo}
+                width="120"
+                height="35"
+                alt="logo"
+              />
               {/* Controls button to close mobile menu */}
               <div
                 onClick={handleNav}
-                className="rounded-full shadow-lg border p-3 cursor-pointer"
+                className="rounded-full shadow-lg border border-[#F2B950] p-3 cursor-pointer text-[#F2B950]"
               >
                 <AiOutlineClose />
               </div>
             </div>
             {/* Controls headline*/}
-            <div className="border-b border-[#4E4E50] my-4">
+            <div className="border-b border-white my-4">
               <p className="w-[85%] md:w-[90%] py-4">
-                Let's build something extraordinary
+                Let's find a recipe
               </p>
             </div>
           </div>
@@ -82,47 +87,54 @@ const navbar = () => {
           <div className="py-4 flex flex-col">
             {/* Menu options for mobile menu */}
             <ul className="uppercase">
-              <Link href="/">
-                <li onClick={()=> setNav(false)} className="py-4 text-sm">Home</li>
+              <Link href="">
+                <li onClick={()=> setNav(false)} className="py-4 text-sm uppercase">Search by spirit </li>
               </Link>
-              <Link href="/#about">
-                <li onClick={()=> setNav(false)} className="py-4 text-sm">About</li>
+              <Link href="">
+                <li onClick={()=> setNav(false)} className="py-4 text-sm uppercase">Search by glassware</li>
               </Link>
-              <Link href="/#skills">
-                <li onClick={()=> setNav(false)} className="py-4 text-sm">Skills</li>
+              <Link href="">
+                <li onClick={()=> setNav(false)} className="py-4 text-sm uppercase">Search by category</li>
               </Link>
-              <Link href="/#p_projects">
-                <li onClick={()=> setNav(false)} className="py-4 text-sm">Projects</li>
+              <Link href="">
+                <li onClick={()=> setNav(false)} className="py-4 text-sm uppercase">search by first letter</li>
+              </Link>
+              <Link href="">
+                <li onClick={()=> setNav(false)} className="py-4 text-sm uppercase">Search for Random Drink</li>
+              </Link>
+              <Link href="">
+                <li onClick={()=> setNav(false)} className="py-4 text-sm uppercase">Search by non-alcoholic</li>
               </Link>
               <Link href="/#contact">
-                <li onClick={()=> setNav(false)} className="py-4 text-sm">Contact</li>
+                <li onClick={()=> setNav(false)} className="py-4 text-sm">Favorites</li>
               </Link>
             </ul>
             {/* This div is responsible for rendereing 'Lets Connect' near the bottom of the mobile menu */}
             <div className="pt-6">
-              <p className="uppercase tracking-widest text-[#0093B9]">
-                Lets Connect
-              </p>
+              <p className="uppercase tracking-widest text-[#070e26]">
+                Like the app?</p>
+                <p className="uppercase tracking-widest text-[#070e26]">You are gonna love the developer</p>
               {/* This div is responsible for rendering social media icons to the bottom of the screen */}
               <div className="flex items-center justify-between my-4 w-[80%] sm:[80%]">
-                <div className="rounded-full p-3 cursor-pointer hover:scale-105 ease in duration-100 border">
+                <div className="rounded-full p-3 cursor-pointer hover:scale-105 ease in duration-100 border border-[#070e26]">
                 <a href="https://www.linkedin.com/in/adam-wagh/" target='_blank'>
                   <FaLinkedinIn />
                   </a>
                 </div>
-                <div className="rounded-full p-3 cursor-pointer hover:scale-105 ease in duration-100 border">
+                <div className="rounded-full p-3 cursor-pointer hover:scale-105 ease in duration-100 border border-[#070e26]">
                   <a href="https://github.com/adamwagh512">
                   <FaGithub />
                   </a>
                 </div>
-                <div className="rounded-full p-3 cursor-pointer hover:scale-105 ease in duration-100 border">
+                <div className="rounded-full p-3 cursor-pointer hover:scale-105 ease in duration-100 border border-[#070e26]">
                   <a href="mailto:adamwagh@gmail.com">
                   <AiOutlineMail />
                   </a>
                 </div>
-                <div className="rounded-full p-3 cursor-pointer hover:scale-105 ease in duration-100 border">
-                  <a href="../assets/resume.pdf"
+                <div className="rounded-full p-3 cursor-pointer hover:scale-105 ease in duration-100 border border-[#070e26]">
+                  <a href='/resume.pdf'
                       target="_blank"
+                      className="color-[#070e26]"
                       rel="noreferrer">
                   <BsPersonLinesFill />
                   </a>
