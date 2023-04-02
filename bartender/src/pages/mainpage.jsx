@@ -76,7 +76,7 @@ const mainpage = () => {
             </div>
 
             <div className="text-black text-center pt-5 text-xl">
-              <a href="">
+              <a href="/RandomDrink">
                 <p className={rock_salt.className}>Random Drink</p>
               </a>
             </div>
