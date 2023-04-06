@@ -70,7 +70,7 @@ const mainpage = () => {
             </div>
 
             <div className="text-black text-center pt-5 text-xl">
-              <a href="">
+              <a href="/letter">
                 <p className={rock_salt.className}>Search by First Letter</p>
               </a>
             </div>

@@ -121,7 +121,7 @@ console.log(strVideo)
               </button> </a>}
               </div>
             </div>
-            <div className="pt-5 flex-wrap">
+            <div className="pt-5 flex-wrap break-all overflow-hidden">
               <p className='text-2xl'>Glass type: `{results.drinks[0].strGlass}`</p>
             {/* Next div used for spacing so it is properly responsive */}
             <div className="w-[100] pt-5"></div>
@@ -129,7 +129,7 @@ console.log(strVideo)
             {/* Next div used for spacing so it is properly responsive */}
             <div className="w-[100] pt-5"></div>
             {/* populating our ingredients */}
-            <div className="columns-2 lg:columns-3 text-center">{divs}</div>
+            <div className="columns-2 lg:columns-3 text-center overflow-hidden">{divs}</div>
             {/* Next div used for spacing so it is properly responsive */}
             <div className="w-[100] pt-5"></div>
             {/* our instructions section */}
@@ -149,30 +149,3 @@ console.log(strVideo)
 
 export default drink;
 
-//  <div></div>
-{
-  /* <div className='text-6xl text-center pt-[20%] md:pt-[10%] lg:pt-[5%]'>
-{/* This code renders the drink name to the page */
-}
-{
-  /* <h1>{results.drinks[0].strDrink}</h1>
-</div>
-<img className='h-[60vh]' src={results.drinks[0].strDrinkThumb}></img>
-<div> */
-}
-{
-  /* This code renders the glass type information to the page */
-}
-{
-  /* <p className='text-2xl'>Glass type: `{results.drinks[0].strGlass}`</p>
-<p className='text-2xl'>Instructions:</p>
-an unordered list populated with instructions function above */
-}
-{
-  /* <ul className='list-disc' id='instructions_list'>{instructions}</ul> */
-}
-// </div>
-// <p className='text-2xl'> Ingredients:</p>
-// <div>
-// {divs}
-// </div> */}
